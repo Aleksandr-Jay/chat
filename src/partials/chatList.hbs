@@ -1,0 +1,9 @@
+<div class="chatList">
+    <a class="chatList__profile" href="./profile.hbs">Профиль ></a>
+    <div class="chatList__search">
+        <input type="text" name="search" placeholder="&#128269; Поиск" />
+    </div>
+    {{#each contacts}}
+        {{> contact}}
+    {{/each}}
+</div>

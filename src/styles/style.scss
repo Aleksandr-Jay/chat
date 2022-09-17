@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+}
+
+error h1 {
+    font-size: 40px;
+}
+
+error h2 {
+    font-size: 20px;
+}
+
+a {
+    color: #3369F3;
+    text-decoration: none;
+}
+
+button {
+    background: #3369F3;
+    border-radius: 8px;
+    color: #FFF;
+    line-height: 37px;
+    font-weight: 500;
+    font-size: 13px;
+    box-shadow: none;
+    border: none;
+}
+
+#auth {
+    width: 340px;
+    box-sizing: border-box;
+    padding: 30px;
+    border: 1px solid #EEE;
+    position: relative;
+    margin: auto;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
+    border-radius: 12px;
+
+    button {
+        width: 100%;
+        display: block;
+        margin-bottom: 14px;
+    }
+}
+
+.auth__actions {
+    position: relative;
+    bottom: 0;
+    margin-top: 47px;
+}
+
+input {
+    border: none;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:focus::placeholder {
+        color: transparent;
+    }
+}
+
+.form__input {
+    text-align: left;
+    margin-top: 32px;
+    position: relative;
+    padding-top: 20px;
+
+    label {
+        display: none;
+        position: absolute;
+        top: 0;
+        font-size: 9px;
+        color: #999999;
+    }
+
+    input {
+        border: none;
+        border-bottom: 1px solid #3369F3 !important;
+        width: 100%;
+
+        &:not(:placeholder-shown),
+        &:focus {
+            ~label {
+                display: block;
+            }
+        }
+    }
+}

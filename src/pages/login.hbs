@@ -1,0 +1,10 @@
+{{!< base}} <div id="auth">
+    <h2>Вход</h2>
+    {{#each loginInputs}}
+    {{> input}}
+    {{/each}}
+    <div class="auth__actions">
+        {{> button title="Авторизоваться"}}
+        <div><a href="./register.hbs">Нет аккаунта?</a></div>
+    </div>
+    </div>

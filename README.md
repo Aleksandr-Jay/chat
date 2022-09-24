@@ -1,6 +1,3 @@
-# chat
-разворачиваем проект
-npm install
 # awesomeChat
 ## Описание
 Проект чата на основе протипа от Yandex: https://www.figma.com/file/df1HFVglEQsgJDOhiRe12h/Chat-based-on-Yandex-example

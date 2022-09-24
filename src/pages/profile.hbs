@@ -1,0 +1,22 @@
+{{!< sub}} <div id="profile">
+    <div id="profile__avatar">
+        <a id="profile__avatar-change" href="">Поменять<br/>аватар</a>
+    </div>
+    <h3>Иван</h3>
+    <div class="profile__data">
+        {{#each profileInputs}}
+        {{> profileInput disabled=1}}
+        {{/each}}
+    </div>
+    <div class="profile__controls">
+        <div class="profile__link">
+            <a href="./profileEdit.hbs">Изменить данные</a>
+        </div>
+        <div class="profile__link">
+            <a href="">Изменить пароль</a>
+        </div>
+        <div class="profile__link redLink">
+            <a href="./index.hbs">Выйти</a>
+        </div>
+    </div>
+    </div>

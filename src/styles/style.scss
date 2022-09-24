@@ -24,6 +24,11 @@ button {
     font-size: 13px;
     box-shadow: none;
     border: none;
+
+    &:hover {
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75) inset;
+        cursor: pointer;
+    }
 }
 
 #auth {
@@ -86,5 +91,88 @@ input {
                 display: block;
             }
         }
+    }
+}
+
+#profile {
+    h3 {
+        font-size: 16px;
+        margin: 21px;
+    }
+
+    #profile__avatar-change {
+        display: none;
+        width: 100%;
+        height: 100%;
+        padding-top: 50px;
+        color: #FFF;
+        background-color: rgba(0, 0, 0, 0.5);
+        font-size: 13px;
+    }
+
+    #profile__avatar {
+        overflow: hidden;
+        margin: 0 auto;
+        width: 130px;
+        height: 130px;
+        border-radius: 65px;
+        background: #EFEFEF url(../../static/i/emptyImage.png) center center no-repeat;
+
+        &:hover {
+            #profile__avatar-change {
+                display: block;
+            }
+        }
+    }
+
+}
+
+.profile__data {
+    margin-top: 60px;
+}
+
+.profile__input,
+.profile__link {
+    border-bottom: 1px solid #EAEAEA;
+    height: 33px;
+    width: 100%;
+    line-height: 33px;
+    position: relative;
+    text-align: right;
+
+    label {
+        font-size: 13px;
+        position: absolute;
+        left: 0;
+        display: block;
+    }
+
+    input {
+        text-align: right;
+        color: #999999;
+    }
+
+    &:last-child {
+        border: none;
+    }
+}
+
+.redLink a {
+    color: #FF0000;
+}
+
+.profile__controls {
+    position: relative;
+    margin-top: 60px;
+
+    .profile__link {
+        text-align: left;
+    }
+
+    button {
+        width: 280px;
+        margin-bottom: 14px;
+        display: block;
+        margin: 0 auto;
     }
 }

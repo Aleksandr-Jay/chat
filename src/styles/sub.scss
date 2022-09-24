@@ -1,0 +1,38 @@
+body {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    height: 100vh;
+}
+
+nav {
+    position: relative;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 64px;
+    background: #FBFBFB;
+    z-index: 9999;
+}
+
+.nav--goback {
+    border-radius: 14px;
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -14px -14px auto;
+}
+
+.nav--goback svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -6px -5px auto;
+}
+#profile{
+    width: 510px;
+    box-sizing: border-box;
+    position: relative;
+    margin: auto;
+}

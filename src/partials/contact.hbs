@@ -1,0 +1,17 @@
+<div class="contact {{#if active}}active{{/if}}">
+    <a class="contact__startChat" href="./../pages/chat.hbs"></a>
+    <div class="contact__avatar"></div>
+    <div class="contact__title">
+        {{firstName}} {{secondName}}
+    </div>
+    <div class="contact__lastMessage">
+        {{#if selfMsg}}
+        <span>Вы:</span>
+        {{/if}}
+        {{lastMessage}}
+    </div>
+    <div class="contact__time">{{time}}</div>
+    {{#if unreadCnt}}
+    <div class="contact__unreadCnt">{{unreadCnt}}</div>
+    {{/if}}
+</div>

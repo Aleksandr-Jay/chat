@@ -1,0 +1,12 @@
+{{!< sub}} <div id="profile">
+    <div id="profile__avatar"></div>
+    <h3>Иван</h3>
+    <div class="profile__data">
+        {{#each profileInputs}}
+        {{> profileInput disabled=0}}
+        {{/each}}
+    </div>
+    <div class="profile__controls">
+        {{> button title="Сохранить"}}
+    </div>
+    </div>

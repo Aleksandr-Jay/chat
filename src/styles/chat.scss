@@ -1,18 +1,12 @@
-main {
-    display: flex;
-    align-items: stretch;
-    justify-content: flex-start;
-    height: 100vh;
-}
-
-.chatList {
-    flex-grow: 0;
-    flex-shrink: 0;
+body>nav {
     width: 310px;
-    background: #FBFBFB;
 }
 
-.chatList__profile {
+.chat-list {
+    position: relative;
+}
+
+.chat-list__profile {
     display: block;
     margin-top: 21px;
     margin-right: 10px;
@@ -20,13 +14,13 @@ main {
     color: #999999;
 }
 
-.chatList__search {
+.chat-list__search {
     position: relative;
     top: 0;
     margin: 56px 10px 12px 10px;
 }
 
-.chatList__search input {
+.chat-list__search input {
     width: 100%;
     line-height: 34px;
     background: #EFEFEF;
@@ -34,109 +28,115 @@ main {
     text-align: center;
 }
 
-.contact {
-    position: relative;
-    box-sizing: border-box;
-    margin-top: 2px;
-    height: 71px;
-    width: 100%;
+.chat-list__contacts {
+    padding: 0;
+    list-style: none;
 
-    &:hover,
-    &.active {
-        background-color: #E4EDFD;
+    .contact {
+        display: block;
+        position: relative;
+        box-sizing: border-box;
+        margin-top: 2px;
+        height: 71px;
+        width: 100%;
+
+        &:hover,
+        &.active {
+            background-color: #E4EDFD;
+        }
+
+        &:after {
+            content: "";
+            height: 1px;
+            background: #EAEAEA;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 290px;
+            margin-left: 10px;
+        }
+
+        .contact__title,
+        .contact__lastMessage,
+        .contact__avatar {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin-top: 12px;
+            margin-left: 10px;
+        }
+
+        .contact__avatar {
+            height: 47px;
+            width: 47px;
+            border-radius: 23.5px;
+            background: #EAEAEA;
+        }
+
+        .contact__title,
+        .contact__lastMessage {
+            margin-left: 67px;
+            width: 193px;
+        }
+
+        .contact__title {
+            color: #1E1E1E;
+            font-weight: 600;
+        }
+
+        .contact__lastMessage {
+            margin-top: 29px;
+            color: #999999;
+
+            & span {
+                color: #1E1E1E;
+                font-weight: 500;
+            }
+        }
+
+        time,
+        .contact__unreadCnt {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-right: 10px;
+        }
+
+        time {
+            margin-top: 12px;
+            color: #999999;
+        }
+
+        .contact__unreadCnt {
+            margin-top: 39px;
+            color: #FFF;
+            background: #3369F3;
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 11px;
+            line-height: 20px;
+        }
+
+        .contact__startChat {
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            margin: 0;
+            z-index: 3000;
+
+            &.active {
+                cursor: default;
+            }
+        }
     }
-
-    &:after {
-        content: "";
-        height: 1px;
-        background: #EAEAEA;
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 290px;
-        margin-left: 10px;
-    }
 }
 
-.contact__title,
-.contact__lastMessage,
-.contact__avatar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: 12px;
-    margin-left: 10px;
-}
-
-.contact__avatar {
-    height: 47px;
-    width: 47px;
-    border-radius: 23.5px;
-    background: #EAEAEA;
-}
-
-.contact__title,
-.contact__lastMessage {
-    margin-left: 67px;
-    width: 193px;
-}
-
-.contact__title {
-    color: #1E1E1E;
-    font-weight: 600;
-}
-
-.contact__lastMessage {
-    margin-top: 29px;
-    color: #999999;
-
-    & span {
-        color: #1E1E1E;
-        font-weight: 500;
-    }
-}
-
-.contact__time,
-.contact__unreadCnt {
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-right: 10px;
-}
-
-.contact__time {
-    margin-top: 12px;
-    color: #999999;
-}
-
-.contact__unreadCnt {
-    margin-top: 39px;
-    color: #FFF;
-    background: #3369F3;
-    width: 20px;
-    height: 20px;
-    border-radius: 10px;
-    text-align: center;
-    font-size: 11px;
-    line-height: 20px;
-}
-.contact__startChat{
-    display: block;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    margin: 0;
-    z-index: 3000;
-    &.active{
-        cursor: default;
-    }
-}
-
-.chatMessageBox-null {
-    text-align: center;
-    flex-grow: 1;
-    align-self: center;
+.chat-message__null {
+    margin: auto;
     color: #999999;
 }

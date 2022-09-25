@@ -1,6 +1,7 @@
 # awesomeChat
 ## Описание
 Проект чата на основе протипа от Yandex: https://www.figma.com/file/df1HFVglEQsgJDOhiRe12h/Chat-based-on-Yandex-example
+Адрес на хостинге Netlify: https://starlit-concha-f1fc32.netlify.app/
 ### Общая информация
 Для работы проекта требуется node версии v14.18.0
 ## Настройка рабочего окружения
@@ -17,4 +18,12 @@ npm install
 ### Dev 
 ```shell
 npm run dev
+```
+### Production 
+```shell
+npm run start
+```
+### Только сборка 
+```shell
+npm run build
 ```

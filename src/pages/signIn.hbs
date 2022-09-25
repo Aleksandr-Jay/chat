@@ -1,0 +1,10 @@
+{{!< base}} <div class="sign-form">
+    <h2>Вход</h2>
+    {{#each signInInputs}}
+    {{> signInput}}
+    {{/each}}
+    <div class="sign-form__actions">
+        {{> button title="Авторизоваться"}}
+        <div class="sign-form__link"><a href="./signUp.hbs">Нет аккаунта?</a></div>
+    </div>
+    </div>

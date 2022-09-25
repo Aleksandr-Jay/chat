@@ -1,13 +1,35 @@
-body {
+body,
+html {
     margin: 0;
+    padding: 0;
 }
 
-error h1 {
-    font-size: 40px;
+body {
+    height: 100vh;
+    justify-content: flex-start;
+    align-items: stretch;
+    display: flex;
 }
 
-error h2 {
-    font-size: 20px;
+* {
+    box-sizing: border-box;
+}
+
+.error {
+    margin: auto;
+    text-align: center;
+
+    h1 {
+        font-size: 40px;
+        margin: 20px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+    nav{
+        margin-top: 69px;
+    }
 }
 
 a {
@@ -15,7 +37,22 @@ a {
     text-decoration: none;
 }
 
-button {
+body>nav {
+    position: relative;
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 64px;
+    background: #FBFBFB;
+    z-index: 9999;
+}
+
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+main button {
     background: #3369F3;
     border-radius: 8px;
     color: #FFF;
@@ -24,14 +61,14 @@ button {
     font-size: 13px;
     box-shadow: none;
     border: none;
+    cursor: pointer;
 
     &:hover {
         box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.75) inset;
-        cursor: pointer;
     }
 }
 
-#auth {
+.sign-form {
     width: 340px;
     box-sizing: border-box;
     padding: 30px;
@@ -40,6 +77,7 @@ button {
     margin: auto;
     box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.14);
     border-radius: 12px;
+    text-align: center;
 
     button {
         width: 100%;
@@ -48,7 +86,7 @@ button {
     }
 }
 
-.auth__actions {
+.sign-form__actions {
     position: relative;
     bottom: 0;
     margin-top: 47px;
@@ -56,6 +94,7 @@ button {
 
 input {
     border: none;
+    background-color: transparent;
 
     &:focus {
         outline: none;
@@ -91,88 +130,5 @@ input {
                 display: block;
             }
         }
-    }
-}
-
-#profile {
-    h3 {
-        font-size: 16px;
-        margin: 21px;
-    }
-
-    #profile__avatar-change {
-        display: none;
-        width: 100%;
-        height: 100%;
-        padding-top: 50px;
-        color: #FFF;
-        background-color: rgba(0, 0, 0, 0.5);
-        font-size: 13px;
-    }
-
-    #profile__avatar {
-        overflow: hidden;
-        margin: 0 auto;
-        width: 130px;
-        height: 130px;
-        border-radius: 65px;
-        background: #EFEFEF url(../../static/i/emptyImage.png) center center no-repeat;
-
-        &:hover {
-            #profile__avatar-change {
-                display: block;
-            }
-        }
-    }
-
-}
-
-.profile__data {
-    margin-top: 60px;
-}
-
-.profile__input,
-.profile__link {
-    border-bottom: 1px solid #EAEAEA;
-    height: 33px;
-    width: 100%;
-    line-height: 33px;
-    position: relative;
-    text-align: right;
-
-    label {
-        font-size: 13px;
-        position: absolute;
-        left: 0;
-        display: block;
-    }
-
-    input {
-        text-align: right;
-        color: #999999;
-    }
-
-    &:last-child {
-        border: none;
-    }
-}
-
-.redLink a {
-    color: #FF0000;
-}
-
-.profile__controls {
-    position: relative;
-    margin-top: 60px;
-
-    .profile__link {
-        text-align: left;
-    }
-
-    button {
-        width: 280px;
-        margin-bottom: 14px;
-        display: block;
-        margin: 0 auto;
     }
 }

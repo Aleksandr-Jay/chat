@@ -7,5 +7,5 @@ app.get('/', (req, res) => {
     res.sendFile(`${__dirname}/../dist/index.html`);
 });
 app.listen(3000, () => {
-    console.log('Running on port 3000');
+    console.log('Server running at http://localhost:3000');
 });

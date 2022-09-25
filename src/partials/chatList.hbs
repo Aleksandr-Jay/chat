@@ -1,9 +1,11 @@
-<div class="chatList">
-    <a class="chatList__profile" href="./profile.hbs">Профиль ></a>
-    <div class="chatList__search">
+<div class="chat-list">
+    <a class="chat-list__profile" href="./profile.hbs">Профиль ></a>
+    <div class="chat-list__search">
         <input type="text" name="search" placeholder="&#128269; Поиск" />
     </div>
+    <ul class="chat-list__contacts">
     {{#each contacts}}
         {{> contact}}
     {{/each}}
+    </ul>
 </div>

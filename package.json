@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "dev": "parcel ./src/pages/*.hbs --no-cache",
-    "start": "node ./server/express.js",
+    "start": "parcel build ./src/pages/*.hbs && node ./server/express.js",
     "build": "parcel build ./src/pages/*.hbs"
   },
   "devDependencies": {
